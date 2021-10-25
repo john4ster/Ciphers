@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="images/lock icon.png">
+  <title>Ciphers</title>
+</head>
+<body>
+  <div id="topBar">
+    <div id="titles">
+      <h1 id="title">Ciphers</h1>
+      <h3 id="subtitle">Encrypt and decrypt text using different cipher algorithms</h3>
+    </div>
+    <img id="bannerImage" src="images/encryption image.jpg">
+  </div>
+  <div id="cipherForm">
+    <div class="textEntry">
+      <p>Plain Text</p>
+      <textarea id="plainTextBox"></textarea>
+    </div>
+      <div id="formCenter">
+        <p>Select Cipher</p>
+        <select id="cipherDropdown">
+          <option value="Caesar">Caesar Cipher</option>
+          <option value="Affine">Affine Cipher</option>
+        </select>
+        <button type="submit" name="encryptButton" id="encryptButton">Encrypt →</button>
+        <button type="submit" name="decryptButton" id="decryptButton">← Decrypt</button>
+        <button type="submit" name="clearButton" id="clearButton">Clear</button>
+      </div>
+    <div class="textEntry">
+      <p>Encrypted Text</p>
+      <textarea id="encryptedTextBox"></textarea>
+    </div>
+  </div>
+
+  <footer id="footer">
+    <p>Website Created By John Forster</p>
+    <a href="https://github.com/john4ster"><img src="images/gitHubIcon.png"></a>
+  </footer>
+
+  <script type="module" src="js/script.js"></script>
+</body>
+</html>
