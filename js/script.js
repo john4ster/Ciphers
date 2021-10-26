@@ -1,5 +1,6 @@
 //Import cipher functions from external files
 import { caesarCipher } from "./ciphers/caeserCipher.js";
+import { rot13 } from "./ciphers/rot13.js";
 import { affineCipher } from "./ciphers/affineCipher.js";
 
 let plainTextBox = document.getElementById("plainTextBox");
@@ -22,6 +23,10 @@ encryptButton.addEventListener("click", event => {
   if (selectedCipher == "Caesar") {
     encryptedTextBox.value = caesarCipher(plainText, "encrypt");
   }
+  else if (selectedCipher == "Rot13") {
+    //Rot13 works the same way for both encryption and decryption
+    encryptedTextBox.value = rot13(plainText);
+  }
   else if (selectedCipher == "Affine") {
     encryptedTextBox.value = affineCipher(plainText, "encrypt");
   }
@@ -34,6 +39,10 @@ decryptButton.addEventListener("click", event => {
   //Determine which cipher algorithm to use and populate the plain text box with the decrypted result
   if (selectedCipher == "Caesar") {
     plainTextBox.value = caesarCipher(encryptedText, "decrypt")
+  }
+  else if (selectedCipher == "Rot13") {
+    //Rot13 works the same way for both encryption and decryption
+    plainTextBox.value = rot13(encryptedText)
   }
   else if (selectedCipher == "Affine") {
     plainTextBox.value = affineCipher(encryptedText, "decrypt")
